@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DigitalMedia.Console/DigitalMedia.Console.csproj" />
+  <Project Path="DigitalMedia.Core/DigitalMedia.Core.csproj" />
+  <Project Path="DigitalMedia.Data/DigitalMedia.Data.csproj" />
+</Solution>
