@@ -1,3 +1,4 @@
+```
 # ===== OS files =====
 .DS_Store
 .DS_Store?
@@ -45,6 +46,124 @@ msbuild.wrn
 *.iobj
 *.pch
 
+# ===== Multi-project / layered solution layout (Presentation / Business / Data) =====
+# Typical for a 3-layer (Presentation / Business Logic / Data Access) solution
+# where each layer is its own project; these just reinforce the bin/obj rules
+# above for common layer-naming conventions.
+**/*.Presentation/[Bb]in/
+**/*.Presentation/[Oo]bj/
+**/*.UI/[Bb]in/
+**/*.UI/[Oo]bj/
+**/*.Business*/[Bb]in/
+**/*.Business*/[Oo]bj/
+**/*.BLL/[Bb]in/
+**/*.BLL/[Oo]bj/
+**/*.DataAccess*/[Bb]in/
+**/*.DataAccess*/[Oo]bj/
+**/*.DAL/[Bb]in/
+**/*.DAL/[Oo]bj/
+**/*.Tests/[Bb]in/
+**/*.Tests/[Oo]bj/
+*.sln.cache
+*.buildlog
+
+# ===== ASP.NET / EF Core specifics =====
+*.dbmdl
+*.jfm
+PrecompiledWeb/
+App_Data/
+UserSecrets/
+# EF Core migration tooling scratch files (keep the actual Migrations/ folder!)
+*.ef.sql
+
+# ===== Test results =====
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+coverage*.json
+coverage*.xml
+coverage*.info
+coverage*.opencover.xml
+*.coverage
+*.coveragexml
+BenchmarkDotNet.Artifacts/
+.sonarqube/
+
+# ===== NuGet =====
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+nuget.config.user
+
+# ===== Publish / deployment =====
+publish/
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.pubxml.user
+*.publishproj
+PublishScripts/
+AppPackages/
+BundleArtifacts/
+Package.StoreAssociation.xml
+_pkginfo.txt
+*.appx
+*.appxbundle
+*.appxupload
+ClientBin/
+*.nupkg.metadata
+
+# ===== Docker (common alongside a layered .NET solution) =====
+docker-compose.override.yml
+*.dockerfile.local
+
+# ===== ReSharper / Rider / other .NET tools =====
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.JustCode
+_TeamCity*
+*.dotCover
+.axoCover/*
+!.axoCover/settings.json
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+.mfractor/
+FodyWeavers.xsd
+*.sln.iml
+.idea/
+*.iml
+
+# ===== SQL / database files =====
+*.mdf
+*.ldf
+*.ndf
+healthchecksdb
+*.sqlite
+*.sqlite3
+*.db
+
+# ===== Security / secrets =====
+*.pfx
+*.snk
+*.publishsettings
+*.pem
+*.key
+secrets.json
+appsettings.*.local.json
+appsettings.Development.json
+.env
+.env.*
+
 # ===== Visual Studio =====
 .vs/
 *.vsidx
@@ -69,82 +188,20 @@ ipch/
 *.VC.db
 *.VC.VC.opendb
 
-# ===== Test results =====
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
-*.VisualState.xml
-TestResult.xml
-nunit-*.xml
-coverage*.json
-coverage*.xml
-coverage*.info
-*.coverage
-*.coveragexml
-BenchmarkDotNet.Artifacts/
-
-# ===== NuGet =====
-*.nupkg
-*.snupkg
-**/[Pp]ackages/*
-!**/[Pp]ackages/build/
-*.nuget.props
-*.nuget.targets
-project.lock.json
-project.fragment.lock.json
-artifacts/
-
-# ===== Publish / deployment =====
-publish/
-*.[Pp]ublish.xml
-*.azurePubxml
-*.pubxml
-*.publishproj
-PublishScripts/
-AppPackages/
-BundleArtifacts/
-Package.StoreAssociation.xml
-_pkginfo.txt
-*.appx
-*.appxbundle
-*.appxupload
-ClientBin/
-
-# ===== ReSharper / Rider / other .NET tools =====
-_ReSharper*/
-*.[Rr]e[Ss]harper
-*.DotSettings.user
-.JustCode
-_TeamCity*
-*.dotCover
-.axoCover/*
-!.axoCover/settings.json
-_NCrunch_*
-.*crunch*.local.xml
-nCrunchTemp_*
-.mfractor/
-FodyWeavers.xsd
-*.sln.iml
-
-# ===== SQL / database files =====
-*.mdf
-*.ldf
-*.ndf
-healthchecksdb
-
-# ===== Security =====
-*.pfx
-*.snk
-*.publishsettings
-
 # ===== Visual Studio Code =====
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/*.code-snippets
+.vscode/.ropeproject
+.vscode/*.log
 *.code-workspace
 .history/
 *.vsix
+.vscode-test/
+.vscode-server/
 
 # ===== Build / dependency folders (other stacks) =====
 node_modules/
@@ -164,16 +221,8 @@ venv/
 *.bak
 *.cache
 *.swp
+*.swo
 *.binlog
 ~$*
 *~
-
-# ===== Env / secrets =====
-.env
-.env.*
-*.pem
-*.key
-
-# ===== Other IDE caches =====
-.idea/
-*.iml
+```
