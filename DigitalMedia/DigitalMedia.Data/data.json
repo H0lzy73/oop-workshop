@@ -1,0 +1,31 @@
+
+{
+    "medialist" :[
+        {
+            "type" : "",
+            "title" : "",
+            "author" : "",
+            "director" : "",
+            "genre" : "",
+            "year" : "",
+            "ISBN" : "",
+            "language" : "",
+            "pages" : "",
+            "duration" : "",
+            "singer" : "",
+            "composer" : "",
+            "filetype" : "",
+            "publisher" : "",
+            "platform" : "",
+            "version" : "",
+            "filesize" : "",
+            "resolution" : "",
+            "fileformat" : "",
+            "datetaken" : "",
+            "host" : "",
+            "guest" : "",
+            "episode" : "",
+
+        }
+    ]
+}
